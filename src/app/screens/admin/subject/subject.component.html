@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Tên môn</th>
+            <th>Logo</th>
+        </thead>
+        <tbody *ngFor="let s of listSubjects">
+            <tr>
+                <td>
+                    <a>{{s.id}}</a>
+                </td>
+                <td>
+                    <a>{{s.Code}}</a>
+                </td>
+                <td>
+                    <a style="color: black; text-decoration: none;" [routerLink]="['../cau-hoi/',s.Code]" routerLinkActive="router-link-active">{{s.Name}}</a>
+                </td>
+                <td>{{s.Logo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

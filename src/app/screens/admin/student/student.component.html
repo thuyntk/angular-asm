@@ -1,0 +1,33 @@
+<div class="container">
+    <button class="btn btn-success" [routerLink]="['../sinh-vien/add']" routerLinkActive="router-link-active" >Tạo mới</button>
+    <table class="table table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Fullname</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+            <th>Schoolfee</th>
+            <th>Marks</th>
+            <th>Action</th>
+        </thead>
+        <tbody *ngIf = "listStudents.length>0">
+            <tr *ngFor = "let s of listStudents">
+                <td>{{s.id}}</td>
+                <td>{{s.username}}</td>
+                <td>{{s.password}}</td>
+                <td>{{s.fullname}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.gender | gender}}</td>
+                <td>{{s.birthday}}</td>
+                <td>{{s.schoolfee}}</td>
+                <td>{{s.marks}}</td>
+                <td>
+                    <button class="btn btn-primary" [routerLink]="['../sinh-vien/edit/',s.id]" routerLinkActive="router-link-active" >Sửa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

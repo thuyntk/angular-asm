@@ -1,0 +1,114 @@
+<style>
+     .navbar li a {
+            display: block;
+            padding: 13px 20px 11px;
+            margin: 0px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #2c2c2c;
+            border: 2px solid transparent;
+            position: relative;
+        }
+</style>
+<div id="content" class="p-4 p-md-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col-md-3 mb-md-0 mb-3">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['mon-hoc']" routerLinkActive="router-link-active">Môn học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['quiz/:id']" routerLinkActive="router-link-active">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['quiz/:id/ket-qua']" routerLinkActive="router-link-active">Final</a>
+                    </li>
+                </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3"></div>
+                <div class="col-md-3 mb-md-0 mb-3"></div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link waves-light" mdbWavesEffect>My account</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link  waves-light" [routerLink]="['/login']" routerLinkActive="router-link-active" >Log out</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4" style="color: rgb(245, 244, 244) ;background: #697e9b; ">
+        <!-- Footer Links -->
+        <div class="container-fluid text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3 text-center">
+                    <!-- Content -->
+                    <img src="https://ap.poly.edu.vn/images/logo.png" alt="">
+                    <p> Tòa nhà FPT Polytechnic, Phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội.</p>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <!-- Grid column -->
+                <div class="col-md-6 mb-md-0 mb-6">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Thông tin liên hệ</h5>
+                    <ul class="nav flex-column">
+                        <li>
+                            <a href="#!" style="text-decoration: none; color: white;">Số điện thoại liên hệ giải đáp ý
+                                kiến sinh viên:02473001955</a>
+                        </li>
+                        <li>
+                            <a href="#!" style="text-decoration: none; color: white;">Địa chỉ email các phòng ban</a>
+                            <ul>
+                                <li>Phòng dịch vụ sinh viên: dvsvpoly.hn@poly.edu.vn</li>
+                            </ul>
+                            <ul>
+                                <li>Phòng Tổ chức và quản lý đào tạo:</li>
+                                <ul>
+                                    <li>Đào tạo: daotaopoly.hn@fe.edu.vn - 02462979544</li>
+                                    <li>Khảo thí: khaothipolyhn@fe.edu.vn - 02462594013</li>
+                                </ul>
+                            </ul>
+                            <ul>
+                                <li>Phòng hành chính: hanhchinhfplhn@fe.edu.vn - 02466822713 - 02463276306 - 02463276305
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>Phòng quan hệ doanh nghiệp: qhdn.poly@fe.edu.vn - 02462604713</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!" style="text-decoration: none; color: white;">Ý kiến đóng góp chung gửi về
+                                ykien.poly@fpt.edu</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">Permanent Link:
+            http://hn-lms.poly.edu.vn/goto.php?target=root_1&client_id=lmsfpoly
+            powered by ILIAS (v5.2.0 2017-02-07) | Legal Notice | Contact Technical Support
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</div>
