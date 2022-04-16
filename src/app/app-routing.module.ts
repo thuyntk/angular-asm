@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './helpers/auth/auth.guard';
 import { AdminLayoutComponent } from './layouts/admin/admin-layout/admin-layout.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { AddQuestionComponent } from './screens/admin/add-question/add-question.component';
@@ -49,12 +50,12 @@ const routes: Routes = [
         component: QuestionComponent
       },
       {
-        path: "cau-hoi/add",
+        path: "cau-hoi/add/:id",
         component: AddQuestionComponent
       },
       {
-        path: "cau-hoi/edit/:id",
-        component: EditQuestionComponent
+        path: "cau-hoi/:id/edit/:idQues",
+        component: AddQuestionComponent
       }
     ]
   },
@@ -72,7 +73,8 @@ const routes: Routes = [
       },
       {
         path: "quiz/:id",
-        component: QuizComponent
+        component: QuizComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: "quiz/:id/ket-qua",

@@ -6,14 +6,18 @@
     <div class="row">
         <div class="col-6 subjects-item border border-info" *ngFor = "let s of listSubjects">
             <div class="subjects-item-image">
-                <a>
-                    <img [src]="'assects/logos' + sub.Logo" alt="">
+                <a [routerLink]="'/quiz/' + s.Code" >
+                    <img [src]="'assets/logos/logos/' + s.Logo" alt="">
                 </a>
             </div>
             <div class="subjects-item-text">
                 <div class="subjects-item-text-main">
                     <div>
-                        <div>{{s.Name}}</div>
+                        <div>
+                            <a [routerLink]="'/quiz/' + s.Code" style="text-decoration: none; color: black;">
+                                {{s.Name}}
+                            </a>
+                        </div>
                     </div>
                     <button class="btn btn-primary" [routerLink]="['../quiz/',s.Code]" routerLinkActive="router-link-active" >Làm bài</button>
                 </div>

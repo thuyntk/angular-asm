@@ -16,9 +16,9 @@ export class AddStudentComponent implements OnInit {
     gender: "",
     birthday: "",
     schoolfee: 0,
+    marks:""
   }
   constructor( private studentServices: StudentServicesService) { }
-
   ngOnInit(): void {
     this.getStudent();
   }

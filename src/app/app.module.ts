@@ -20,6 +20,10 @@ import { FinalComponent } from './screens/home/final/final.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SubComponent } from './screens/home/sub/sub.component';
 import { GenderPipe } from './helpers/pipes/gender.pipe';
+import { FormsModule } from '@angular/forms';
+// import { GoogleLoginProvider, SocialAuthService, SocialAuthServiceConfig } from 'angularx-social-login';
+// import { environment } from 'src/environments/environment';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -46,8 +50,26 @@ import { GenderPipe } from './helpers/pipes/gender.pipe';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    FormsModule,
+    // SocialAuthService, 
+    RouterModule
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: 'SocialAuthServiceConfig',
+    //   useValue: {
+    //     autoLogin: false,
+    //     providers: [
+    //       {
+    //         id: GoogleLoginProvider.PROVIDER_ID,
+    //         provider: new GoogleLoginProvider(
+    //           environment.GOOGLE_CLIENT_ID
+    //         )
+    //       }
+    //     ]
+    //   } as SocialAuthServiceConfig,
+    // }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

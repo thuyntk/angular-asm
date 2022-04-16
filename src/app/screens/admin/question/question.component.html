@@ -1,5 +1,5 @@
 <div class="container">
-    <button class="btn btn-success" [routerLink]="['../']" routerLinkActive="router-link-active" >Tạo mới</button>
+    <button class="btn btn-success" [routerLink]="'/admin/cau-hoi/add/'+param" routerLinkActive="router-link-active" >Tạo mới</button>
     <table class="table table-hover">
         <thead>
             <th>ID</th>
@@ -17,7 +17,8 @@
                 <td>{{s.AnswerId}}</td>
                 <td ><tr *ngFor = "let i of s.Answers">{{i.Text}}</tr></td>
                 <td>
-                    <button class="btn btn-primary">Sửa</button>
+                    <button class="btn btn-primary" [routerLink]="['edit/', s.id]" routerLinkActive="router-link-active" >Sửa</button>
+                    <button class="btn btn-danger" (click)="deleteQuestion(s.id)">Xóa</button>
                 </td>
             </tr>
         </tbody>

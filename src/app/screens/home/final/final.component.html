@@ -5,18 +5,16 @@
         <table class="table">
             <thead>
               <tr>
+                <th>Sinh viên</th>
                 <th>Tên môn</th>
                 <th>Điểm</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Lập trình Android nâng cao</td>
-                <td>7/10</td>
-              </tr>
-              <tr>
-                  <td>Lập trình cơ bản</td>
-                  <td>8/10</td>
+              <tr *ngFor="let item of studentOfQuiz">
+                <td>{{ item.fullname }}</td>
+                <td>{{ subject.Name }}</td>
+                <td>{{ item.score.score }}</td>
               </tr>
             </tbody>
           </table>

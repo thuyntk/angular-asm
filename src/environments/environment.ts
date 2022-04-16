@@ -4,6 +4,8 @@
 const baseAPIURL = "http://localhost:3000";
 export const environment = {
   production: false,
+  // GOOGLE_CLIENT_ID: "55502735793-3ael189okc3gns01bkvc81c32g9gpgpo.apps.googleusercontent.com",
+  apiUrl: baseAPIURL,
   student_api: `${baseAPIURL}/students`,
   subject_api: `${baseAPIURL}/subjects`,
   question_api: `${baseAPIURL}`

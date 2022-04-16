@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { AuthServiceService } from 'src/app/services/auth/auth-service.service';
 
 @Component({
   selector: 'app-home-layout',
@@ -11,5 +12,10 @@ export class HomeLayoutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // isLoggedIn(): boolean{
+  //   return this.authService.isLoggedIn();
+  // }
+  // logout():void{
+  //   this.authService.logout();
+  // }
 }
