@@ -6,7 +6,9 @@
     <div class="row">
         <div class="col-6 subjects-item border border-info" *ngFor = "let s of listSubjects">
             <div class="subjects-item-image">
-                <img src="http://logoart.vn/blog/wp-content/uploads/2013/08/logo-android.png" width="130px">
+                <a>
+                    <img [src]="'assects/logos' + sub.Logo" alt="">
+                </a>
             </div>
             <div class="subjects-item-text">
                 <div class="subjects-item-text-main">
