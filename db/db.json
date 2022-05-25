@@ -9,7 +9,12 @@
       "gender": "1",
       "birthday": "1995-12-21",
       "schoolfee": "1500000",
-      "marks": []
+      "marks": [
+        {
+          "subject": "ADAV",
+          "score": 3
+        }
+      ]
     },
     {
       "id": 2,
